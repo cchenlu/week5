@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chenlu — Home</title>
+  <meta name="description" content="Chenlu — a friendly front-end developer who loves building warm, human-centered web experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class='brand' href='index.html'><span class="brand-dot"></span> Chenlu</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='resume.html'>Resume</a></li>
+        <li><a href='projects.html'>Projects</a></li>
+        <li><a href='contact.html'>Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-photo">
+        <img src="photo.jpg" alt="Portrait of Chenlu" />
+      </div>
+      <div class="hero-text">
+        <h1>Chenlu</h1>
+        <p class="hero-intro">
+          Hi, I'm Chenlu. I am a university student. I enjoy learning new
+          things, working on interesting projects, and exploring different
+          ideas.
+        </p>
+        <div class="hero-actions">
+          <a class='btn btn-primary' href='projects.html'>See my work</a>
+          <a class='btn btn-ghost' href='contact.html'>Say hello</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three things I like -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Three things I love</h2>
+      <p class="section-subtitle">A little peek into what makes me, well, me.</p>
+      <div class="likes-grid">
+        <article class="like-card">
+          <div class="like-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#c95f3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 8h1a4 4 0 0 1 0 8h-1"/>
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/>
+              <line x1="6" y1="2" x2="6" y2="4"/>
+              <line x1="10" y1="2" x2="10" y2="4"/>
+              <line x1="14" y1="2" x2="14" y2="4"/>
+            </svg>
+          </div>
+          <h3>Morning coffee</h3>
+          <p>Nothing beats a slow pour-over and a fresh notebook. My best ideas show up right after that first sip.</p>
+        </article>
+        <article class="like-card">
+          <div class="like-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#c95f3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </div>
+          <h3>Learning new things</h3>
+          <p>From design history to generative art, I'm endlessly curious and always mid-way through three books.</p>
+        </article>
+        <article class="like-card">
+          <div class="like-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#c95f3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="13" cy="4" r="2"/>
+              <path d="M4 22l5-7 4 2 3-5 4 3"/>
+              <path d="M9 15l-1-4"/>
+            </svg>
+          </div>
+          <h3>Trail runs</h3>
+          <p>Headphones on, feet on the dirt. It's where I untangle problems and remember that ideas need space to breathe.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="funfact">
+        <strong>Fun fact:</strong> I once got lost looking for a coffee shop and ended up on a 14-mile hike. Best detour ever.
+      </div>
+      <div>
+        <div class="footer-links">
+          <a href='index.html'>Home</a>
+          <a href='resume.html'>Resume</a>
+          <a href='projects.html'>Projects</a>
+          <a href='contact.html'>Contact</a>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> Chenlu. Made with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
