@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chenlu — World Time App</title>
+  <meta name="description" content="A world time app by Chenlu — search a city to see the current local time, date, and time zone, updating every second." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/worldtime.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class='brand' href='index.html'><span class="brand-dot"></span> Chenlu</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='resume.html'>Resume</a></li>
+        <li><a href='projects.html'>Projects</a></li>
+        <li><a href='contact.html'>Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>World Time App</h1>
+      <p>See what time it is anywhere in the world. The clock ticks live, every second.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:10px;">
+    <div class="container">
+      <a class="btn btn-ghost back-to-projects" href="projects.html">&larr; Back to Projects</a>
+
+      <div class="time-app">
+        <header class="time-header">
+          <h2>Check the Time</h2>
+          <p>Enter a city name to see its current local time.</p>
+        </header>
+
+        <form class="time-search" id="timeForm" autocomplete="off">
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter a city name..."
+            aria-label="City name"
+            autocomplete="off"
+            dir="ltr"
+          />
+          <button type="submit" class="search-btn" id="searchBtn">Search</button>
+        </form>
+
+        <div class="time-status" id="timeStatus" role="status" aria-live="polite"></div>
+
+        <section class="time-card" id="timeCard" hidden>
+          <div class="time-icon" aria-hidden="true">&#128344;</div>
+          <div class="time-main">
+            <div class="time-city" id="timeCity"></div>
+            <div class="time-clock" id="timeClock">--:--:--</div>
+            <div class="time-date" id="timeDate"></div>
+            <div class="time-zone" id="timeZone"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="funfact">
+        <strong>Fun fact:</strong> I once got lost looking for a coffee shop and ended up on a 14-mile hike. Best detour ever.
+      </div>
+      <div>
+        <div class="footer-links">
+          <a href='index.html'>Home</a>
+          <a href='resume.html'>Resume</a>
+          <a href='projects.html'>Projects</a>
+          <a href='contact.html'>Contact</a>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> Chenlu. Made with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/worldtime.js"></script>
+</body>
+</html>

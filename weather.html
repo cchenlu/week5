@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chenlu — Weather App</title>
+  <meta name="description" content="A simple weather app by Chenlu — search a city to see real-time temperature, conditions, and an icon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/weather.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class='brand' href='index.html'><span class="brand-dot"></span> Chenlu</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='resume.html'>Resume</a></li>
+        <li><a href='projects.html'>Projects</a></li>
+        <li><a href='contact.html'>Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Weather App</h1>
+      <p>Type a city, hit Search, and see what the sky is doing right now.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:10px;">
+    <div class="container">
+      <a class="btn btn-ghost back-to-projects" href="projects.html">&larr; Back to Projects</a>
+
+      <div class="weather-app">
+        <header class="weather-header">
+          <h2>Check the Weather</h2>
+          <p>Enter a city name to see the current conditions.</p>
+        </header>
+
+        <form class="weather-search" id="weatherForm" autocomplete="off">
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter a city name..."
+            aria-label="City name"
+            autocomplete="off"
+          />
+          <button type="submit" class="search-btn" id="searchBtn">Search</button>
+        </form>
+
+        <div class="weather-status" id="weatherStatus" role="status" aria-live="polite"></div>
+
+        <section class="weather-card" id="weatherCard" hidden>
+          <div class="weather-icon" id="weatherIcon" aria-hidden="true"></div>
+          <div class="weather-main">
+            <div class="weather-top">
+              <div class="weather-city" id="weatherCity"></div>
+              <div class="unit-toggle" id="unitToggle" role="group" aria-label="Temperature unit">
+                <button type="button" class="unit-btn active" data-unit="c" aria-pressed="true">°C</button>
+                <button type="button" class="unit-btn" data-unit="f" aria-pressed="false">°F</button>
+              </div>
+            </div>
+            <div class="weather-temp" id="weatherTemp"></div>
+            <div class="weather-condition" id="weatherCondition"></div>
+            <div class="weather-extra" id="weatherExtra"></div>
+          </div>
+        </section>
+
+        <section class="forecast" id="forecast" hidden>
+          <h3 class="forecast-title">3-Day Forecast</h3>
+          <div class="forecast-grid" id="forecastGrid"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="funfact">
+        <strong>Fun fact:</strong> I once got lost looking for a coffee shop and ended up on a 14-mile hike. Best detour ever.
+      </div>
+      <div>
+        <div class="footer-links">
+          <a href='index.html'>Home</a>
+          <a href='resume.html'>Resume</a>
+          <a href='projects.html'>Projects</a>
+          <a href='contact.html'>Contact</a>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> Chenlu. Made with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/weather.js"></script>
+</body>
+</html>

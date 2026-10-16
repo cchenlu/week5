@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chenlu — Projects</title>
+  <meta name="description" content="Selected projects by Chenlu, front-end developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class='brand' href='index.html'><span class="brand-dot"></span> Chenlu</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='resume.html'>Resume</a></li>
+        <li><a href='projects.html'>Projects</a></li>
+        <li><a href='contact.html'>Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Projects</h1>
+      <p>A few things I've built that I'm genuinely proud of. More on the way.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:10px;">
+    <div class="container">
+      <div class="projects-grid">
+        <a class="project-card" href="todo.html" style="color: var(--text);">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #e07856, #f4b860);">&#10003;</div>
+          <div class="project-body">
+            <h3>To-Do List App</h3>
+            <p>A clean, mobile-friendly to-do list with date selection, Low/Medium/High priority, inline task editing, and a Supabase backend. Mark tasks done, delete with one tap, and track progress with a live counter.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Supabase</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="weather.html" style="color: var(--text);">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #5b9bd5, #c5e0f5);">&#9729;</div>
+          <div class="project-body">
+            <h3>Weather App</h3>
+            <p>A simple, mobile-friendly weather app. Type a city name, hit Search, and get the current temperature, conditions, and a fitting icon in seconds — powered by the UAPI Weather API.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="worldtime.html" style="color: var(--text);">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #6d5bd5, #c5b0f5);">&#128344;</div>
+          <div class="project-body">
+            <h3>World Time App</h3>
+            <p>A clean, mobile-friendly world clock. Search any city to see its current local time, date, and time zone. The clock ticks live every second, using the UAPI World Time API as its initial reference.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="funfact">
+        <strong>Fun fact:</strong> I once got lost looking for a coffee shop and ended up on a 14-mile hike. Best detour ever.
+      </div>
+      <div>
+        <div class="footer-links">
+          <a href='index.html'>Home</a>
+          <a href='resume.html'>Resume</a>
+          <a href='projects.html'>Projects</a>
+          <a href='contact.html'>Contact</a>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> Chenlu. Made with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
